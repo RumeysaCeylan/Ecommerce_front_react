@@ -13,6 +13,9 @@ import MapList from './further/MapList';
 import MapTable from './further/MapTable';
 import MapContainer from './further/MapContainer';
 import SelectComponent from './further/SelectComponent';
+import { FetchList } from './fetch/FetchList';
+import { FetchListState } from './fetch/FetchListState';
+import { FetchGet } from './fetch/FetchGet';
 
 function App() {
   return (
@@ -31,8 +34,10 @@ function App() {
         {/* <MapList/> */}
         {/* <MapTable/> */}
         {/* <MapContainer/> */}
-        <SelectComponent/>
-        
+        {/* <SelectComponent/> */}
+        {/* <FetchList/> */}
+        {/* <FetchListState/> */}
+        <FetchGet/>
       </header>
     </div>
   );

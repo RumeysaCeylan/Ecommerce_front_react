@@ -14,4 +14,4 @@ export default function StateComponent(){
             <button onClick= {changeQuantity}>ok</button>{' '}
         </div>
     )
-}
+} 
