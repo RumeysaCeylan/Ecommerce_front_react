@@ -16,6 +16,7 @@ import SelectComponent from './further/SelectComponent';
 import { FetchList } from './fetch/FetchList';
 import { FetchListState } from './fetch/FetchListState';
 import { FetchGet } from './fetch/FetchGet';
+import RouteDefinitons from './router/app/RouteDefinitions';
 
 function App() {
   return (
@@ -37,7 +38,8 @@ function App() {
         {/* <SelectComponent/> */}
         {/* <FetchList/> */}
         {/* <FetchListState/> */}
-        <FetchGet/>
+        {/* <FetchGet/> */}
+        <RouteDefinitons/>
       </header>
     </div>
   );
