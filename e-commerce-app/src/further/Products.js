@@ -1,27 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+//import { API_BASE_URL } from '../apiConfig';
+import '../App.css';
 
 export default function Products() {
   const { categoryId } = useParams();
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch.get(`http://localhost:8081/products/${categoryId}`)
-      .then(response => setProducts(response.data))
+    fetch(`http://localhost:8081/products/${categoryId}`)
+      .then(response => response.json())
+      .then(data => setProducts(data))
       .catch(error => console.log(error));
-  }, [categoryId]);
+  }, [products,categoryId]);
 
   return (
     <div>
       <h2>Products</h2>
       <ul>
         {products.map(product => (
-          <li key={product.id}>
-            <a href={`/product/${product.id}`}>{product.name}</a>
+          <li key={product.categoryId}>
+            <a href={`/product/${product.productId}`}>{product.productName}</a>  
           </li>
         ))}
       </ul>
     </div>
   );
 }
-
