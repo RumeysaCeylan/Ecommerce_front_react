@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import { HolderComponent } from './redux/HolderComponent';
+import { Provider } from 'react-redux';
+import store from './redux/coreStore';
 // import FunctionComponent from './functionComponent';
 // import ParentComponent from './ParentComponent';
 // import FormComponent from './EventComponent';
@@ -17,10 +20,11 @@ import './App.css';
 // import { FetchListState } from './fetch/FetchListState';
 // import { FetchGet } from './fetch/FetchGet';
 // import RouteDefinitons from './router/app/RouteDefinitions';
-import BasicCard from './router/app/mui';
+// import BasicCard from './router/app/mui';
 
 function App() {
   return (
+    <Provider store={store}>
     <div className="App">
       <header className="App-header">
          <br>
@@ -41,13 +45,12 @@ function App() {
         {/* <FetchListState/> */}
         {/* <FetchGet/> */}
         {/* <RouteDefinitons/> */}
-        <BasicCard/>
-        <br></br>
-        <BasicCard/>
-        <br></br>
-        <BasicCard/>
+        {/* <BasicCard/> */}
+        <HolderComponent/>
+
       </header>
     </div>
+    </Provider>
   );
 }
 

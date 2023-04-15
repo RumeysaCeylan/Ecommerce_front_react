@@ -19,7 +19,7 @@ useEffect(() => {
     <ul>
       {categories.map(category => (
         <li key={category.categoryId}>
-          <a href={`/products/${category.categoryId}`}>{category.categoryName}</a>
+          <a href={`/inventory/categoriesComponent/${category.categoryId}`}>{category.categoryName}</a>
         </li>
       ))}
     </ul>

@@ -11,10 +11,10 @@ const bull = (
     component="span"
     sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)',boxShadow: "4px 4px black" }}
   >
-    •
   </Box>
 );
-
+//card theme
+//ödev :: yaptığımız state örneğinde ObjectComponent 
 export default function BasicCard() {
   return (
     <Card sx={{ minWidth: 275 }}>
@@ -41,3 +41,4 @@ export default function BasicCard() {
     
   );
 }
+//map filter reduce

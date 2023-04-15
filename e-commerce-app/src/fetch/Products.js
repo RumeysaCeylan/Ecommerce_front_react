@@ -20,7 +20,7 @@ export default function Products() {
       <ul>
         {products.map(product => (
           <li key={product.categoryId}>
-            <a href={`/product/${product.productId}`}>{product.productName}</a>  
+            <a href={`/inventory/productsComponent/${product.productId}`}>{product.productName}</a>  
           </li>
         ))}
       </ul>
